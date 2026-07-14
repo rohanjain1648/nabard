@@ -1,7 +1,10 @@
 import axios from 'axios'
 
 const client = axios.create({
-  baseURL: '/api',
+  // In local dev / docker-compose, '/api' is proxied to the backend (Vite proxy or nginx).
+  // For a split deploy (static frontend + separate backend host), set VITE_API_BASE_URL
+  // at build time to the backend's full URL, e.g. https://cashflow-sahayak-api.onrender.com/api
+  baseURL: import.meta.env.VITE_API_BASE_URL || '/api',
   timeout: 15000,
 })
 
