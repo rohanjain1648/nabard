@@ -54,18 +54,112 @@ We fuse manual ledger entries with external macro-signals (UPI-style activity pr
 
 ## 6. System Architecture
 Our architecture is built on the principle of **Offline-first, server-smart**.
+
+```mermaid
+flowchart TB
+    subgraph Client["PWA (React + Vite)"]
+        UI_E["Enterprise views\n(entry, forecast, alerts)"]
+        UI_F["Field-officer views\n(portfolio, profile, risk panel)"]
+        SW["Service Worker\n(cache, background sync)"]
+        IDB[("IndexedDB\nlocal ledger + cached\nforecasts/alerts")]
+        RULES["Local rule engine\n(offline alert checks)"]
+    end
+
+    subgraph API["Backend (FastAPI)"]
+        AUTH["Auth (JWT, 2 roles)"]
+        LEDGER["Ledger service\n(entries, sync endpoint)"]
+        ENT["Enterprise service\n(profiles, loans, savings)"]
+        FORE["Forecast service"]
+        RISK["Risk & alert service"]
+        SUGG["Suggestion engine\n(sector × driver rules)"]
+    end
+
+    subgraph ML["ML Pipeline (Python, batch)"]
+        FEAT["Feature builder\n(lags, rolls, seasonality,\nexternal joins)"]
+        FCST["Forecaster\nLightGBM quantile (P10/50/90)\n+ seasonal-naive baseline"]
+        SCORE["Risk scorer\nGBM classifier + SHAP drivers"]
+    end
+
+    subgraph DATA["Data Layer"]
+        PG[("PostgreSQL\n(SQLite fallback for demo)")]
+        SIM["Data simulator\n(enterprises, ledgers, shocks)"]
+        EXT["External-signal adapters\ncommodity | weather | UPI-proxy\n(simulated now, real later)"]
+    end
+
+    UI_E & UI_F --> SW --> IDB
+    SW <-->|"sync (batched, resumable)"| LEDGER
+    IDB --> RULES
+    Client <--> AUTH
+    LEDGER & ENT --> PG
+    FORE & RISK --> PG
+    FEAT --> FCST --> SCORE
+    PG --> FEAT
+    EXT --> PG
+    SIM --> PG
+    SCORE -->|"scores + drivers"| RISK
+    FCST -->|"forecast rows"| FORE
+    RISK --> SUGG
+```
+
 - **Client:** React PWA (Vite, Workbox) with IndexedDB for local ledger state.
 - **Backend:** FastAPI modular monolith handling JWT auth and idempotent batch synchronization.
 - **ML Pipeline:** Pooled LightGBM quantile regression (P10/P50/P90) + Gemini for unstructured insights.
 - **Data Layer:** PostgreSQL (or SQLite for local demo) storing immutable ledger events.
 
 ## 7. Workflow & Orchestration
+
+```mermaid
+sequenceDiagram
+    participant User as Enterprise Owner
+    participant App as PWA (Offline)
+    participant SW as Service Worker
+    participant API as FastAPI Backend
+    participant ML as ML Pipeline (Batch)
+
+    User->>App: Logs Income/Expense (Offline)
+    App->>App: Saves to IndexedDB
+    Note over User,App: User is Offline
+    User->>App: Regains Connectivity
+    App->>SW: Triggers Background Sync
+    SW->>API: POST /sync (Batch Payload)
+    API->>API: Deduplicate & Persist to DB
+    API-->>ML: Trigger ML Job
+    ML->>ML: Generate Forecast & Risk Score
+    ML-->>API: Write back Results
+    API-->>SW: Return new Forecast & Alerts
+    SW->>App: Update Local Cache
+    App->>User: Show New Alert Notification
+```
+
 1. **Offline Entry:** Client writes append-only ledger entries to IndexedDB.
 2. **Background Sync:** Connectivity returns; Service Worker pushes a batch payload to the FastAPI `/sync` endpoint.
 3. **Batch ML Trigger:** The backend ingests the ledger, runs the Python ML pipeline (feature building → forecasting → scoring), and updates the DB.
 4. **Client Update:** The sync response delivers fresh forecasts and Gemini-powered alerts back to the client cache.
 
 ## 8. Data Flow & State Management
+
+```mermaid
+flowchart LR
+    A[Manual Ledger Entries] --> D[(PostgreSQL / SQLite)]
+    B[Market Prices & Weather API] --> D
+    C[UPI Activity Proxies] --> D
+    
+    D --> E[Feature Engineering]
+    E --> F[LightGBM Quantile Forecast]
+    E --> G[GBM Risk Classifier]
+    
+    F --> H[Forecast API]
+    G --> I[Gemini 2.5 Flash API]
+    
+    I --> J[Plain-Language Alert]
+    H --> K[Forecast Visualization]
+    
+    J --> L[Enterprise Owner App]
+    K --> L
+    J --> M[Field Officer Dashboard]
+    K --> M
+```
+
 State is managed optimistically on the client. The ledger is append-only, making conflict resolution trivial. The ML models are stateless pipelines that pull from the DB, generate forecasts, and write back results. The system is designed to seamlessly swap simulated data adapters (weather, commodity, UPI) for real production APIs (IMD, Agmarknet, Account Aggregator).
 
 ## 9. Tech Stack

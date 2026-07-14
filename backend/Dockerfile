@@ -2,6 +2,12 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
+# lightgbm's compiled extension needs libgomp (OpenMP) at runtime; python:3.11-slim
+# doesn't ship it, so `import lightgbm` crashes with "libgomp.so.1: cannot open
+# shared object file" without this.
+RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN pip install --no-cache-dir uv
 
 COPY pyproject.toml ./
