@@ -1,0 +1,28 @@
+{
+  "dairy": {
+    "income": ["milk_sale", "ghee_sale", "cattle_sale", "manure_sale"],
+    "expense": ["fodder", "veterinary", "cattle_feed", "labour", "loan_emi"]
+  },
+  "poultry": {
+    "income": ["broiler_sale", "egg_sale"],
+    "expense": ["feed", "chicks", "veterinary", "labour", "loan_emi"]
+  },
+  "food_processing": {
+    "income": ["product_sale", "bulk_order", "retail_order"],
+    "expense": ["raw_material", "packaging", "labour", "storage", "loan_emi"]
+  },
+  "handicrafts": {
+    "income": ["retail_sale", "export_order", "exhibition_sale"],
+    "expense": ["raw_material", "tools", "labour", "transport", "loan_emi"]
+  },
+  "rural_retail": {
+    "income": ["daily_sale", "credit_sale_collection"],
+    "expense": ["stock_purchase", "transport", "rent", "labour", "loan_emi"]
+  },
+  "common": {
+    "income": ["other_income"],
+    "expense": ["other_expense"],
+    "savings_deposit": ["savings_deposit"],
+    "savings_withdrawal": ["savings_withdrawal"]
+  }
+}

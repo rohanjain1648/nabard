@@ -1,0 +1,51 @@
+id,name,sector,village,district,state,onboarded_at,savings_balance
+ENT0001,Suresh Dairy,dairy,Ichhawar,Sehore,Madhya Pradesh,2024-08-23,5987.97
+ENT0002,Meena Dairy,dairy,Ichhawar,Sehore,Madhya Pradesh,2024-08-28,11850.19
+ENT0003,Shobha Dairy,dairy,Nandyal,Kurnool,Andhra Pradesh,2024-07-14,7819.69
+ENT0004,Deepak Dairy,dairy,Adoni,Kurnool,Andhra Pradesh,2024-07-21,9541.61
+ENT0005,Rakesh Dairy,dairy,Akkalkot,Solapur,Maharashtra,2024-08-05,12865.25
+ENT0006,Manoj Dairy,dairy,Nasrullaganj,Sehore,Madhya Pradesh,2024-07-14,9035.08
+ENT0007,Ramesh Dairy,dairy,Barshi,Solapur,Maharashtra,2024-08-21,9811.74
+ENT0008,Radha Dairy,dairy,Barshi,Solapur,Maharashtra,2024-08-28,10184.94
+ENT0009,Rakesh Dairy,dairy,Adoni,Kurnool,Andhra Pradesh,2024-08-02,3162.18
+ENT0010,Suresh Dairy,dairy,Budni,Sehore,Madhya Pradesh,2024-08-07,10407.85
+ENT0011,Vijay Poultry Farm,poultry,Akkalkot,Solapur,Maharashtra,2024-07-10,13700.01
+ENT0012,Anita Poultry Farm,poultry,Adoni,Kurnool,Andhra Pradesh,2024-07-11,2494.08
+ENT0013,Sunita Poultry Farm,poultry,Nasrullaganj,Sehore,Madhya Pradesh,2024-08-02,13947.4
+ENT0014,Geeta Poultry Farm,poultry,Nasrullaganj,Sehore,Madhya Pradesh,2024-08-16,13293.44
+ENT0015,Anil Poultry Farm,poultry,Adoni,Kurnool,Andhra Pradesh,2024-08-21,3491.75
+ENT0016,Anita Poultry Farm,poultry,Nandyal,Kurnool,Andhra Pradesh,2024-08-20,5336.17
+ENT0017,Meena Poultry Farm,poultry,Nasrullaganj,Sehore,Madhya Pradesh,2024-07-07,2151.39
+ENT0018,Suresh Poultry Farm,poultry,Mangalvedha,Solapur,Maharashtra,2024-07-10,11861.35
+ENT0019,Rakesh Poultry Farm,poultry,Ichhawar,Sehore,Madhya Pradesh,2024-07-25,13547.24
+ENT0020,Shobha Poultry Farm,poultry,Nandyal,Kurnool,Andhra Pradesh,2024-07-19,5796.93
+ENT0021,Ramesh Food Processing Unit,food_processing,Yemmiganur,Kurnool,Andhra Pradesh,2024-08-26,4915.47
+ENT0022,Shobha Food Processing Unit,food_processing,Ichhawar,Sehore,Madhya Pradesh,2024-07-26,14042.21
+ENT0023,Geeta Food Processing Unit,food_processing,Budni,Sehore,Madhya Pradesh,2024-08-07,4860.08
+ENT0024,Anita Food Processing Unit,food_processing,Yemmiganur,Kurnool,Andhra Pradesh,2024-08-07,6881.18
+ENT0025,Suresh Food Processing Unit,food_processing,Akkalkot,Solapur,Maharashtra,2024-08-20,2001.88
+ENT0026,Kavita Food Processing Unit,food_processing,Nandyal,Kurnool,Andhra Pradesh,2024-08-02,11439.07
+ENT0027,Lakshmi Food Processing Unit,food_processing,Adoni,Kurnool,Andhra Pradesh,2024-07-18,14748.64
+ENT0028,Suresh Food Processing Unit,food_processing,Akkalkot,Solapur,Maharashtra,2024-08-14,14042.7
+ENT0029,Ramesh Food Processing Unit,food_processing,Mangalvedha,Solapur,Maharashtra,2024-07-28,5239.35
+ENT0030,Suresh Food Processing Unit,food_processing,Nasrullaganj,Sehore,Madhya Pradesh,2024-08-25,14252.62
+ENT0031,Manoj Handicrafts,handicrafts,Budni,Sehore,Madhya Pradesh,2024-08-02,6317.14
+ENT0032,Suresh Handicrafts,handicrafts,Ichhawar,Sehore,Madhya Pradesh,2024-08-14,11612.54
+ENT0033,Shobha Handicrafts,handicrafts,Nasrullaganj,Sehore,Madhya Pradesh,2024-08-28,2305.12
+ENT0034,Lakshmi Handicrafts,handicrafts,Adoni,Kurnool,Andhra Pradesh,2024-08-23,8313.63
+ENT0035,Rakesh Handicrafts,handicrafts,Mangalvedha,Solapur,Maharashtra,2024-08-03,4733.0
+ENT0036,Prakash Handicrafts,handicrafts,Nasrullaganj,Sehore,Madhya Pradesh,2024-08-25,5831.0
+ENT0037,Manoj Handicrafts,handicrafts,Yemmiganur,Kurnool,Andhra Pradesh,2024-08-26,4598.07
+ENT0038,Kavita Handicrafts,handicrafts,Ichhawar,Sehore,Madhya Pradesh,2024-08-20,3935.08
+ENT0039,Suresh Handicrafts,handicrafts,Adoni,Kurnool,Andhra Pradesh,2024-08-12,12550.7
+ENT0040,Meena Handicrafts,handicrafts,Nandyal,Kurnool,Andhra Pradesh,2024-07-06,5302.59
+ENT0041,Anil General Store,rural_retail,Adoni,Kurnool,Andhra Pradesh,2024-08-03,6616.32
+ENT0042,Manoj General Store,rural_retail,Nasrullaganj,Sehore,Madhya Pradesh,2024-08-21,3279.26
+ENT0043,Kavita General Store,rural_retail,Adoni,Kurnool,Andhra Pradesh,2024-07-31,10938.66
+ENT0044,Ramesh General Store,rural_retail,Yemmiganur,Kurnool,Andhra Pradesh,2024-08-09,8539.12
+ENT0045,Rakesh General Store,rural_retail,Adoni,Kurnool,Andhra Pradesh,2024-07-16,10196.19
+ENT0046,Lakshmi General Store,rural_retail,Budni,Sehore,Madhya Pradesh,2024-08-13,7895.88
+ENT0047,Lakshmi General Store,rural_retail,Budni,Sehore,Madhya Pradesh,2024-07-14,6955.5
+ENT0048,Radha General Store,rural_retail,Budni,Sehore,Madhya Pradesh,2024-08-23,5616.72
+ENT0049,Anil General Store,rural_retail,Adoni,Kurnool,Andhra Pradesh,2024-07-19,6405.07
+ENT0050,Shobha General Store,rural_retail,Akkalkot,Solapur,Maharashtra,2024-07-23,13447.27

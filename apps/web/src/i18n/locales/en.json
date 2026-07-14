@@ -1,0 +1,101 @@
+{
+  "app_name": "CashFlow Sahayak",
+  "tagline_short": "Rural cash-flow intelligence",
+  "common": {
+    "launch_app": "Launch app",
+    "sign_in": "Sign in",
+    "learn_more": "Learn more",
+    "get_started": "Get started",
+    "back": "Back"
+  },
+  "login": {
+    "title": "Sign in",
+    "subtitle": "Log in to your dashboard",
+    "phone": "Phone number",
+    "password": "Password",
+    "submit": "Sign in",
+    "error": "Invalid phone or password"
+  },
+  "nav": {
+    "home": "Home",
+    "forecast": "Forecast",
+    "alerts": "Alerts",
+    "logout": "Log out",
+    "portfolio": "Portfolio",
+    "risk_panel": "Risk Panel"
+  },
+  "entry": {
+    "add_entry": "Add entry",
+    "income": "Income",
+    "expense": "Expense",
+    "savings_deposit": "Savings deposit",
+    "savings_withdrawal": "Savings withdrawal",
+    "loan_repayment": "Loan repayment",
+    "amount": "Amount (₹)",
+    "category": "Category",
+    "note": "Note (optional)",
+    "save": "Save entry",
+    "saved_offline": "Saved — will sync when online",
+    "recent_entries": "Recent entries",
+    "no_entries": "No entries yet. Add your first above."
+  },
+  "status": {
+    "online": "Online",
+    "offline": "You're offline — entries will sync automatically",
+    "synced": "All synced",
+    "sync_pending": "{{count}} waiting to sync",
+    "syncing": "Syncing…"
+  },
+  "band": {
+    "green": "Healthy",
+    "amber": "Needs attention",
+    "red": "At risk",
+    "unknown": "Not yet scored"
+  },
+  "forecast": {
+    "title": "6-month cash-flow forecast",
+    "subtitle": "Median projection with P10–P90 confidence band",
+    "median": "Median forecast",
+    "empty": "Forecast will appear after your first entries sync.",
+    "net_flow": "Net cash flow",
+    "projected_balance": "Projected balance"
+  },
+  "risk": {
+    "score": "Risk score",
+    "top_drivers": "Top factors",
+    "suggestion": "Suggested action"
+  },
+  "alerts": {
+    "title": "Alerts",
+    "none": "No alerts — things look good",
+    "acknowledge": "Acknowledge"
+  },
+  "owner": {
+    "greeting": "Your business",
+    "summary": "Financial summary"
+  },
+  "portfolio": {
+    "title": "My portfolio",
+    "subtitle": "Risk-ranked enterprises assigned to you",
+    "search": "Search by name or village",
+    "filter_band": "Risk",
+    "filter_sector": "Sector",
+    "all": "All",
+    "last_entry": "Last entry",
+    "results": "{{count}} enterprises",
+    "no_results": "No enterprises match your filters."
+  },
+  "risk_panel": {
+    "title": "Risk panel",
+    "sector_heatmap": "Risk by sector",
+    "total": "Total"
+  },
+  "enterprise": {
+    "summary": "Enterprise summary",
+    "savings_balance": "Savings balance",
+    "loan_emi": "Loan EMI",
+    "monthly": "/ mo",
+    "alert_timeline": "Alert timeline",
+    "loading": "Loading enterprise…"
+  }
+}

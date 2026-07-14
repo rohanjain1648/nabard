@@ -1,0 +1,74 @@
+{
+  "feature_columns": [
+    "net_flow_lag1",
+    "net_flow_lag2",
+    "net_flow_lag3",
+    "net_flow_lag6",
+    "net_flow_lag12",
+    "net_flow_roll_mean3",
+    "net_flow_roll_mean6",
+    "net_flow_roll_std3",
+    "net_flow_roll_std6",
+    "inflow_outflow_ratio",
+    "entry_regularity",
+    "emi_coverage",
+    "savings_runway_months",
+    "days_since_last_entry",
+    "months_to_festival",
+    "calendar_month",
+    "input_level_z",
+    "input_momentum_3m",
+    "input_volatility",
+    "output_level_z",
+    "output_momentum_3m",
+    "output_volatility",
+    "rainfall_anomaly_mm",
+    "heat_index",
+    "heat_index_pctile",
+    "sector",
+    "horizon"
+  ],
+  "model_version": "forecast-v1",
+  "horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "blend_weight_p50": 0.30000000000000004,
+  "residual_offsets_by_horizon": {
+    "1": {
+      "q10_offset": -7693.010772229443,
+      "q90_offset": 7730.00677494597
+    },
+    "2": {
+      "q10_offset": -6182.417885748945,
+      "q90_offset": 5829.9007966316185
+    },
+    "3": {
+      "q10_offset": -5699.857292420373,
+      "q90_offset": 4572.178961705292
+    },
+    "4": {
+      "q10_offset": -5483.213218285089,
+      "q90_offset": 4450.645651511845
+    },
+    "5": {
+      "q10_offset": -5762.362811099711,
+      "q90_offset": 3691.2087411239613
+    },
+    "6": {
+      "q10_offset": -7900.46175237926,
+      "q90_offset": 512.9815039399581
+    }
+  },
+  "sector_categories": [
+    "dairy",
+    "food_processing",
+    "handicrafts",
+    "poultry",
+    "rural_retail"
+  ]
+}

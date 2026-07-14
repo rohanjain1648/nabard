@@ -1,0 +1,100 @@
+# Suggestion library keyed by (sector, driver_key) — TRD.md FR-5.
+# "all" sector entries apply when no sector-specific entry exists for that driver.
+
+- id: sugg_dairy_input_price
+  sector: dairy
+  driver_key: commodity_input_price_spike
+  text_en: "Fodder prices are rising. Consider buying a month's stock now or switching part of the ration to silage."
+  text_hi: "चारे की कीमतें बढ़ रही हैं। अभी एक महीने का स्टॉक खरीदें या कुछ हिस्सा साइलेज से बदलें।"
+  action_type: cost_management
+
+- id: sugg_dairy_heat
+  sector: dairy
+  driver_key: climate_heat_stress
+  text_en: "Heat stress can reduce milk yield. Ensure shade and extra water for cattle this week."
+  text_hi: "गर्मी से दूध उत्पादन घट सकता है। इस सप्ताह पशुओं के लिए छाया और अतिरिक्त पानी सुनिश्चित करें।"
+  action_type: operational
+
+- id: sugg_poultry_input_price
+  sector: poultry
+  driver_key: commodity_input_price_spike
+  text_en: "Feed costs are spiking. Lock in your next feed purchase early or negotiate a bulk rate with your supplier."
+  text_hi: "फ़ीड की लागत बढ़ रही है। अपनी अगली फ़ीड खरीद जल्दी तय करें या थोक दर पर बातचीत करें।"
+  action_type: cost_management
+
+- id: sugg_poultry_disease
+  sector: poultry
+  driver_key: demand_seasonal_dip
+  text_en: "Sales are below the usual cycle. Check flock health and consider a smaller next batch to manage risk."
+  text_hi: "बिक्री सामान्य चक्र से कम है। झुंड की सेहत जांचें और जोखिम कम करने हेतु अगला बैच छोटा रखें।"
+  action_type: operational
+
+- id: sugg_food_processing_seasonal
+  sector: food_processing
+  driver_key: demand_seasonal_dip
+  text_en: "This is typically a slow month for sales. Delay large raw-material purchases until demand picks up."
+  text_hi: "यह आमतौर पर बिक्री के लिए धीमा महीना है। मांग बढ़ने तक बड़ी कच्चे माल की खरीद टालें।"
+  action_type: cost_management
+
+- id: sugg_food_processing_input
+  sector: food_processing
+  driver_key: commodity_input_price_spike
+  text_en: "Raw material costs are climbing. Review your supplier contract or explore an alternate local source."
+  text_hi: "कच्चे माल की लागत बढ़ रही है। अपने आपूर्तिकर्ता अनुबंध की समीक्षा करें या स्थानीय विकल्प देखें।"
+  action_type: cost_management
+
+- id: sugg_handicrafts_seasonal
+  sector: handicrafts
+  driver_key: demand_seasonal_dip
+  text_en: "Off-season demand is low. Use this period to build festival-season stock at today's lower cost."
+  text_hi: "ऑफ-सीजन मांग कम है। आज की कम लागत पर त्योहारी सीजन का स्टॉक तैयार करने के लिए इस समय का उपयोग करें।"
+  action_type: planning
+
+- id: sugg_rural_retail_rain
+  sector: rural_retail
+  driver_key: climate_rainfall_anomaly
+  text_en: "Unusual rainfall may affect footfall and local crop income. Keep 2 weeks of essential stock and go easy on new credit sales."
+  text_hi: "असामान्य बारिश से ग्राहक संख्या और फसल आय प्रभावित हो सकती है। 2 सप्ताह का आवश्यक स्टॉक रखें और नई उधार बिक्री सीमित करें।"
+  action_type: operational
+
+- id: sugg_rural_retail_seasonal
+  sector: rural_retail
+  driver_key: demand_seasonal_dip
+  text_en: "Sales typically dip this month. Reduce new stock orders and follow up on pending credit-sale collections."
+  text_hi: "इस महीने बिक्री आमतौर पर कम होती है। नए स्टॉक ऑर्डर घटाएं और बकाया उधार वसूली पर ध्यान दें।"
+  action_type: cost_management
+
+- id: sugg_all_liquidity
+  sector: all
+  driver_key: liquidity_shortfall
+  text_en: "Your projected balance may fall short of upcoming payments. Set aside funds now or talk to your field officer about restructuring."
+  text_hi: "आपका अनुमानित बैलेंस आगामी भुगतानों के लिए कम पड़ सकता है। अभी से राशि अलग रखें या पुनर्गठन हेतु फील्ड अधिकारी से बात करें।"
+  action_type: liquidity
+
+- id: sugg_all_emi
+  sector: all
+  driver_key: emi_pressure
+  text_en: "Your loan repayment is due soon and coverage looks tight. Prioritize this payment over discretionary expenses."
+  text_hi: "आपकी ऋण किस्त जल्द देय है और कवरेज कम है। इस भुगतान को अन्य खर्चों से पहले प्राथमिकता दें।"
+  action_type: liquidity
+
+- id: sugg_all_disengagement
+  sector: all
+  driver_key: disengagement
+  text_en: "You haven't logged transactions in a while — regular entries help us catch risks early. Try to log daily, even briefly."
+  text_hi: "आपने काफी समय से लेन-देन दर्ज नहीं किया है — नियमित प्रविष्टियाँ जोखिम जल्दी पहचानने में मदद करती हैं। रोज़ाना संक्षेप में दर्ज करने की कोशिश करें।"
+  action_type: engagement
+
+- id: sugg_all_volatility
+  sector: all
+  driver_key: income_volatility
+  text_en: "Your income has been more unpredictable than usual. Building a small buffer now will help smooth the coming months."
+  text_hi: "आपकी आय हाल में सामान्य से अधिक अनिश्चित रही है। अभी थोड़ा बफर बनाना आने वाले महीनों को आसान बनाएगा।"
+  action_type: liquidity
+
+- id: sugg_all_output_price
+  sector: all
+  driver_key: commodity_output_price_drop
+  text_en: "Prices for what you sell have dropped recently. Where possible, hold non-perishable stock for a better price or diversify buyers."
+  text_hi: "आप जो बेचते हैं उसकी कीमतें हाल में गिरी हैं। जहाँ संभव हो, बेहतर कीमत के लिए स्टॉक रोकें या खरीदारों में विविधता लाएं।"
+  action_type: planning
