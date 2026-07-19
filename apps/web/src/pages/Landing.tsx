@@ -51,10 +51,26 @@ export default function Landing() {
 
       {/* Hero */}
       <header className="hero" ref={heroRef}>
-        <div className="hero-orbs">
-          <span className="orb orb-1" />
-          <span className="orb orb-2" />
-          <span className="orb orb-3" />
+        {/* Signature backdrop: the product's own forecast band (P10-P90 + median),
+            not a decorative gradient blob — draws itself in once, then parallax-scrolls. */}
+        <div className="hero-wave" aria-hidden="true">
+          <svg viewBox="0 0 1200 420" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="waveBand" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#34d3b7" stopOpacity="0.22" />
+                <stop offset="100%" stopColor="#34d3b7" stopOpacity="0.02" />
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#waveBand)"
+              d="M0,150 C150,110 300,190 450,130 C600,70 750,150 900,90 C1050,40 1150,80 1200,50
+                 L1200,290 C1150,220 1050,180 900,230 C750,290 600,210 450,270 C300,330 150,250 0,290 Z"
+            />
+            <path
+              className="hero-wave-line"
+              d="M0,220 C150,180 300,260 450,200 C600,140 750,220 900,160 C1050,110 1150,150 1200,120"
+            />
+          </svg>
         </div>
         <div className="hero-spot" />
         <div className="container hero-inner">

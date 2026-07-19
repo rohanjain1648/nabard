@@ -224,7 +224,7 @@ export default function OwnerHome() {
                     <div className="list-row-title" style={{ fontSize: 14 }}>{t(`entry.${e.type}`)}</div>
                     <div className="list-row-sub">{e.category.replace(/_/g, ' ')} · {e.occurred_at}</div>
                   </div>
-                  <span style={{ fontWeight: 700, color: outflow ? 'var(--red)' : 'var(--green)', fontVariantNumeric: 'tabular-nums' }}>
+                  <span style={{ fontWeight: 700, color: outflow ? 'var(--red)' : 'var(--green)', fontFamily: 'var(--mono)', fontVariantNumeric: 'tabular-nums' }}>
                     {outflow ? '−' : '+'}₹{e.amount.toLocaleString('en-IN')}
                   </span>
                 </div>
