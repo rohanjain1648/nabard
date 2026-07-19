@@ -24,3 +24,13 @@ Note: this simulated dataset has strong deterministic year-over-year seasonality
 - Early-warning lead time (correctly-flagged cases): mean 1.6mo, median 1.0mo, min 1.0mo, n=9
 
 Note: labels are grounded in the simulator's injected shock events (30-90 day windows of depressed income / inflated costs). Restricting to pre-onset months (excluding already-stressed months) forces the model to show genuine anticipatory signal rather than trivially predicting 'still stressed next month' during an ongoing shock.
+
+## Risk classifier (LightGBM, stress-within-3-months, isotonic-calibrated)
+
+- 984 pre-onset enterprise-months total; 743 pooled out-of-fold predictions from walk-forward backtesting (expanding-window folds across the full 24 months - a single holdout left too few stress onsets to evaluate reliably). Deployed model is retrained on the full dataset.
+- Out-of-fold positive rate (transitions into stress within 3mo): 0.012
+- **AUC: 0.989** (target: >= 0.80)
+- Recall at FPR <= 20% budget: 1.000 (actual FPR at chosen threshold: 0.093; target recall: >= 0.80)
+- Early-warning lead time (correctly-flagged cases): mean 1.6mo, median 1.0mo, min 1.0mo, n=9
+
+Note: labels are grounded in the simulator's injected shock events (30-90 day windows of depressed income / inflated costs). Restricting to pre-onset months (excluding already-stressed months) forces the model to show genuine anticipatory signal rather than trivially predicting 'still stressed next month' during an ongoing shock.

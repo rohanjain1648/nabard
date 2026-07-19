@@ -283,3 +283,6 @@ cython_debug/
 
 # Jupyter
 .ipynb_checkpoints
+
+
+pitch-deck.html

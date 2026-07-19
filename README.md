@@ -55,6 +55,8 @@ We fuse manual ledger entries with external macro-signals (UPI-style activity pr
 ## 6. System Architecture
 Our architecture is built on the principle of **Offline-first, server-smart**.
 
+![System Overview](system_overview%20%282%29.png)
+
 ```mermaid
 flowchart TB
     subgraph Client["PWA (React + Vite)"]
@@ -137,6 +139,8 @@ sequenceDiagram
 4. **Client Update:** The sync response delivers fresh forecasts and Gemini-powered alerts back to the client cache.
 
 ## 8. Data Flow & State Management
+
+![Data Flow](data_flow%20%282%29.png)
 
 ```mermaid
 flowchart LR
