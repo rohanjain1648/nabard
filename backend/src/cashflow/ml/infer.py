@@ -258,6 +258,8 @@ def _score_one_enterprise(db: Session, frames: dict[str, pd.DataFrame], feature_
         band=risk_result["band"], drivers=risk_result["drivers"], model_version=risk_result["model_version"],
     ))
 
+    db.query(m.Alert).filter(m.Alert.enterprise_id == enterprise_id, m.Alert.status == "open").delete()
+
     if risk_result["band"] != "green" and risk_result["drivers"]:
         top_driver = risk_result["drivers"][0]
         sector = frames["enterprises"].set_index("id").loc[enterprise_id, "sector"]
