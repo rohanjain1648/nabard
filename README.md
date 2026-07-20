@@ -1,6 +1,8 @@
 # CashFlow Sahayak
 
-**AI-Driven Cash Flow Prediction & Risk Flagging for Rural Micro Enterprises** — NABARD hackathon prototype.
+![CashFlow Sahayak Cover Banner](cover.png)
+
+**AI-Driven Cash Flow Prediction & Risk Flagging for Rural Micro Enterprises**.
 
 A credit-bureau substitute + early-warning radar for SHGs, FPOs, and rural entrepreneurs.
 

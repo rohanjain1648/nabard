@@ -22,4 +22,8 @@ COPY models ./models
 EXPOSE 8000
 # Render (and similar PaaS) inject $PORT at runtime; fall back to 8000 for
 # local `docker compose up`, which maps host 8000 -> container 8000.
-CMD ["sh", "-c", "uv run uvicorn cashflow.api.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+#
+# Re-seeding on every boot keeps the demo self-healing: the container's
+# filesystem is ephemeral on most PaaS, so without this the deployed DB
+# would have no users/enterprises and every login would 401.
+CMD ["sh", "-c", "uv run python -m cashflow.api.seed --data data && uv run uvicorn cashflow.api.main:app --host 0.0.0.0 --port ${PORT:-8000}"]

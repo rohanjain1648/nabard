@@ -54,7 +54,7 @@ export default function Login() {
             <AsideItem icon={<IconCheck size={16} />}>Bilingual — English &amp; हिन्दी</AsideItem>
           </ul>
         </div>
-        <div style={{ opacity: 0.6, fontSize: 13 }}>NABARD hackathon prototype</div>
+
       </aside>
 
       <main className="auth-main">
